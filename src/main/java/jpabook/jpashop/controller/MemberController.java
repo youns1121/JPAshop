@@ -35,8 +35,6 @@ public class MemberController {
         Address address = new Address(form.getCity(), form.getStreet(), form.getZipcode());
 
         Member member = new Member();
-        member.setEmail(form.getEmail());
-        member.setPassword(form.getPassword());
         member.setName(form.getName());
         member.setAddress(address);
 
@@ -53,13 +51,4 @@ public class MemberController {
         return "members/memberList";
     }
 
-    @PostMapping("/members/signIn")
-    public String signIn(String inputEmail, String inputPassword) {
-        log.info("id : {} , pw : {}", inputEmail, inputPassword);
-        Member member = this.member.findMember(inputEmail, inputPassword);
-        if(member != null) {
-            return "loginOK";
-        }
-        return "loginFail";
-    }
 }

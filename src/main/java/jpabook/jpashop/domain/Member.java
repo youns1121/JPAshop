@@ -1,5 +1,6 @@
 package jpabook.jpashop.domain;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -10,20 +11,14 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+@Setter
 @Entity
-@Getter @Setter
+@Getter
 public class Member {
 
     @Id @GeneratedValue
     @Column(name = "member_id")
     private Long id;
-
-    @NotEmpty
-    private String email;
-
-    @NotEmpty
-    private String password;
-
 
     private String name;
 
