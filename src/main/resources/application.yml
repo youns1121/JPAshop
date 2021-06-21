@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url:  jdbc:h2:tcp://localhost/~/jpaboard;  #ex)jdbc:h2:~/jpaboard (최소 한번)
+    url:  jdbc:h2:tcp://localhost/~/jpashop;  #ex)jdbc:h2:~/jpashop (최소 한번)
     username: sa
     password:
     driver-class-name: org.h2.Driver

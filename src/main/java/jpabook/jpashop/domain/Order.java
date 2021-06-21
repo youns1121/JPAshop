@@ -1,10 +1,7 @@
 package jpabook.jpashop.domain;
 
 
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 
 import javax.persistence.*;
@@ -42,6 +39,9 @@ public class Order {
 
     @Enumerated(EnumType.STRING)
     private OrderStatus status; //주문상태 [ORDER, CANCEL]
+
+
+
 
 
     //==연관관계 메소드==//
